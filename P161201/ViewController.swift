@@ -30,22 +30,28 @@ class ViewController: UIViewController {
     }
 
     func setupTable() {
-        MediaLibrary.shared.authorized.bindNext { [unowned self] authorized in
-            if authorized {
-                _ = MediaLibrary.shared.fetch()
-                    .debug()
-                    .bindTo(self.tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { row, track, cell in
-                        cell.configure(row: row, track: track, cell: cell)
-                    }
+        MPMediaLibrary.requestAuthorization({ [unowned self] state in
+            switch state {
+            case .authorized:
+                // Need to jump back to main thread...
+                DispatchQueue.main.async {
+                    MediaLibrary.shared.fetch()
+                        .bindTo(self.tableView.rx.items(cellIdentifier: "TrackCell", cellType: TrackCell.self)) { row, track, cell in
+                            cell.configure(row: row, track: track, cell: cell)
+                        }.addDisposableTo(self.disposeBag)
 
-                _ = self.tableView.rx
-                    .modelSelected(Track.self)
-                    .flatMap({ MediaLibrary.shared.export($0) })
-                    .bindNext({
-                        print($0.url, "exported...")
-                    })
+                    self.tableView.rx
+                        .modelSelected(Track.self)
+                        .flatMap({ MediaLibrary.shared.export($0) })
+                        .bindNext({
+                            print($0.url, "exported...")
+                        }).addDisposableTo(self.disposeBag)
+                }
+
+            default:
+                print("not authorized")
             }
-        }.addDisposableTo(disposeBag)
+        })
     }
 
 }
