@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC04EABB1DF889D4002D0531 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC04EAB81DF889D4002D0531 /* RxBlocking.framework */; };
+		FC04EABC1DF889D4002D0531 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC04EAB91DF889D4002D0531 /* RxCocoa.framework */; };
+		FC04EABD1DF889D4002D0531 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC04EABA1DF889D4002D0531 /* RxSwift.framework */; };
+		FC04EAC21DF889ED002D0531 /* RxBlocking.framework.dSYM in DSYM */ = {isa = PBXBuildFile; fileRef = FC04EABF1DF889ED002D0531 /* RxBlocking.framework.dSYM */; };
+		FC04EAC31DF889ED002D0531 /* RxCocoa.framework.dSYM in DSYM */ = {isa = PBXBuildFile; fileRef = FC04EAC01DF889ED002D0531 /* RxCocoa.framework.dSYM */; };
+		FC04EAC41DF889ED002D0531 /* RxSwift.framework.dSYM in DSYM */ = {isa = PBXBuildFile; fileRef = FC04EAC11DF889ED002D0531 /* RxSwift.framework.dSYM */; };
+		FC04EACD1DF88B3D002D0531 /* MPMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EAC71DF88B3D002D0531 /* MPMediaItem.swift */; };
+		FC04EACE1DF88B3D002D0531 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EAC91DF88B3D002D0531 /* Track.swift */; };
+		FC04EACF1DF88B3D002D0531 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EACA1DF88B3D002D0531 /* Location.swift */; };
+		FC04EAD01DF88B3D002D0531 /* MediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EACB1DF88B3D002D0531 /* MediaLibrary.swift */; };
+		FC04EAD11DF88B3D002D0531 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EACC1DF88B3D002D0531 /* TrackCell.swift */; };
 		FC9E9A2C1DF7113C00F0F204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */; };
 		FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */; };
 		FC9E9A311DF7113C00F0F204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9E9A2F1DF7113C00F0F204 /* Main.storyboard */; };
@@ -14,7 +25,34 @@
 		FC9E9A361DF7113C00F0F204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9E9A341DF7113C00F0F204 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC04EABE1DF889E2002D0531 /* DSYM */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				FC04EAC21DF889ED002D0531 /* RxBlocking.framework.dSYM in DSYM */,
+				FC04EAC31DF889ED002D0531 /* RxCocoa.framework.dSYM in DSYM */,
+				FC04EAC41DF889ED002D0531 /* RxSwift.framework.dSYM in DSYM */,
+			);
+			name = DSYM;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FC04EAB81DF889D4002D0531 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		FC04EAB91DF889D4002D0531 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		FC04EABA1DF889D4002D0531 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		FC04EABF1DF889ED002D0531 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/iOS/RxBlocking.framework.dSYM; sourceTree = "<group>"; };
+		FC04EAC01DF889ED002D0531 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/iOS/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		FC04EAC11DF889ED002D0531 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/iOS/RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		FC04EAC71DF88B3D002D0531 /* MPMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMediaItem.swift; sourceTree = "<group>"; };
+		FC04EAC91DF88B3D002D0531 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		FC04EACA1DF88B3D002D0531 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FC04EACB1DF88B3D002D0531 /* MediaLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaLibrary.swift; sourceTree = "<group>"; };
+		FC04EACC1DF88B3D002D0531 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		FC9E9A281DF7113C00F0F204 /* P161201.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P161201.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +67,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC04EABB1DF889D4002D0531 /* RxBlocking.framework in Frameworks */,
+				FC04EABC1DF889D4002D0531 /* RxCocoa.framework in Frameworks */,
+				FC04EABD1DF889D4002D0531 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC04EAB71DF889D4002D0531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC04EABF1DF889ED002D0531 /* RxBlocking.framework.dSYM */,
+				FC04EAC01DF889ED002D0531 /* RxCocoa.framework.dSYM */,
+				FC04EAC11DF889ED002D0531 /* RxSwift.framework.dSYM */,
+				FC04EAB81DF889D4002D0531 /* RxBlocking.framework */,
+				FC04EAB91DF889D4002D0531 /* RxCocoa.framework */,
+				FC04EABA1DF889D4002D0531 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC04EAC61DF88B3D002D0531 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC04EAC71DF88B3D002D0531 /* MPMediaItem.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC04EAC81DF88B3D002D0531 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC04EAC91DF88B3D002D0531 /* Track.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FC9E9A1F1DF7113C00F0F204 = {
 			isa = PBXGroup;
 			children = (
 				FC9E9A2A1DF7113C00F0F204 /* P161201 */,
 				FC9E9A291DF7113C00F0F204 /* Products */,
+				FC04EAB71DF889D4002D0531 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +125,11 @@
 		FC9E9A2A1DF7113C00F0F204 /* P161201 */ = {
 			isa = PBXGroup;
 			children = (
+				FC04EAC61DF88B3D002D0531 /* Extensions */,
+				FC04EAC81DF88B3D002D0531 /* Models */,
+				FC04EACA1DF88B3D002D0531 /* Location.swift */,
+				FC04EACB1DF88B3D002D0531 /* MediaLibrary.swift */,
+				FC04EACC1DF88B3D002D0531 /* TrackCell.swift */,
 				FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */,
 				FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */,
 				FC9E9A2F1DF7113C00F0F204 /* Main.storyboard */,
@@ -74,6 +150,8 @@
 				FC9E9A241DF7113C00F0F204 /* Sources */,
 				FC9E9A251DF7113C00F0F204 /* Frameworks */,
 				FC9E9A261DF7113C00F0F204 /* Resources */,
+				FC04EABE1DF889E2002D0531 /* DSYM */,
+				FC04EAC51DF88A08002D0531 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -96,6 +174,7 @@
 				TargetAttributes = {
 					FC9E9A271DF7113C00F0F204 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2UJ5F4MU5U;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +210,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FC04EAC51DF88A08002D0531 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC9E9A241DF7113C00F0F204 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC04EAD11DF88B3D002D0531 /* TrackCell.swift in Sources */,
+				FC04EACD1DF88B3D002D0531 /* MPMediaItem.swift in Sources */,
 				FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */,
+				FC04EAD01DF88B3D002D0531 /* MediaLibrary.swift in Sources */,
+				FC04EACF1DF88B3D002D0531 /* Location.swift in Sources */,
 				FC9E9A2C1DF7113C00F0F204 /* AppDelegate.swift in Sources */,
+				FC04EACE1DF88B3D002D0531 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +364,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2UJ5F4MU5U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = P161201/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.bvr.P161201;
@@ -272,6 +381,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2UJ5F4MU5U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = P161201/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.bvr.P161201;
@@ -299,6 +413,7 @@
 				FC9E9A3C1DF7113C00F0F204 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

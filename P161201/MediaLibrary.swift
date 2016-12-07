@@ -17,7 +17,25 @@ class MediaLibrary {
 
     private let bgScheduler = ConcurrentDispatchQueueScheduler(qos: .background)
 
-    let songsQuery = MPMediaQuery.songs()
+    private let songsQuery = MPMediaQuery.songs()
+
+    public var authorized = Observable<Bool>
+        .create({ (observer: AnyObserver<Bool>) -> Disposable in
+            MPMediaLibrary.requestAuthorization({ status in
+                switch status {
+                case .authorized:
+                    observer.onNext(true)
+                default:
+                    observer.onNext(false)
+                }
+                observer.onCompleted()
+            })
+            return Disposables.create()
+        })
+        .debug()
+        .observeOn(MainScheduler.instance)
+        .startWith(false)
+        .distinctUntilChanged()
 
     func fetch() -> Observable<[Track]> {
         return Observable<[Track]>.create({ observer in

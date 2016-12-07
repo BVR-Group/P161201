@@ -13,7 +13,7 @@ class TrackCell: UITableViewCell {
     @IBOutlet weak var durationLabel: UILabel!
 
     public func configure(row: Int, track: Track, cell: TrackCell) {
-        titleLabel.text = "\(track.title) - \(track.artist)"
+        titleLabel.text    = "\(track.title) - \(track.artist)"
         durationLabel.text = "\(track.duration)"
     }
 }
