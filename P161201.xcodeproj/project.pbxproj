@@ -18,6 +18,10 @@
 		FC04EACF1DF88B3D002D0531 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EACA1DF88B3D002D0531 /* Location.swift */; };
 		FC04EAD01DF88B3D002D0531 /* MediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EACB1DF88B3D002D0531 /* MediaLibrary.swift */; };
 		FC04EAD11DF88B3D002D0531 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EACC1DF88B3D002D0531 /* TrackCell.swift */; };
+		FC04EAD31DF8AD94002D0531 /* GistSwift.framework.dSYM in DSYM */ = {isa = PBXBuildFile; fileRef = FC04EAD21DF8AD94002D0531 /* GistSwift.framework.dSYM */; };
+		FC04EAD51DF8ADA1002D0531 /* GistSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC04EAD41DF8ADA1002D0531 /* GistSwift.framework */; };
+		FC04EAD91DFB6056002D0531 /* AVAudioTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EAD81DFB6056002D0531 /* AVAudioTime.swift */; };
+		FC04EADB1DFB6455002D0531 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EADA1DFB6455002D0531 /* BarView.swift */; };
 		FC9E9A2C1DF7113C00F0F204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */; };
 		FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */; };
 		FC9E9A311DF7113C00F0F204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9E9A2F1DF7113C00F0F204 /* Main.storyboard */; };
@@ -32,6 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				FC04EAD31DF8AD94002D0531 /* GistSwift.framework.dSYM in DSYM */,
 				FC04EAC21DF889ED002D0531 /* RxBlocking.framework.dSYM in DSYM */,
 				FC04EAC31DF889ED002D0531 /* RxCocoa.framework.dSYM in DSYM */,
 				FC04EAC41DF889ED002D0531 /* RxSwift.framework.dSYM in DSYM */,
@@ -53,6 +58,10 @@
 		FC04EACA1DF88B3D002D0531 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FC04EACB1DF88B3D002D0531 /* MediaLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaLibrary.swift; sourceTree = "<group>"; };
 		FC04EACC1DF88B3D002D0531 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		FC04EAD21DF8AD94002D0531 /* GistSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GistSwift.framework.dSYM; path = Carthage/Build/iOS/GistSwift.framework.dSYM; sourceTree = "<group>"; };
+		FC04EAD41DF8ADA1002D0531 /* GistSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GistSwift.framework; path = Carthage/Build/iOS/GistSwift.framework; sourceTree = "<group>"; };
+		FC04EAD81DFB6056002D0531 /* AVAudioTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAudioTime.swift; sourceTree = "<group>"; };
+		FC04EADA1DFB6455002D0531 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		FC9E9A281DF7113C00F0F204 /* P161201.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P161201.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC04EAD51DF8ADA1002D0531 /* GistSwift.framework in Frameworks */,
 				FC04EABB1DF889D4002D0531 /* RxBlocking.framework in Frameworks */,
 				FC04EABC1DF889D4002D0531 /* RxCocoa.framework in Frameworks */,
 				FC04EABD1DF889D4002D0531 /* RxSwift.framework in Frameworks */,
@@ -79,6 +89,8 @@
 		FC04EAB71DF889D4002D0531 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC04EAD41DF8ADA1002D0531 /* GistSwift.framework */,
+				FC04EAD21DF8AD94002D0531 /* GistSwift.framework.dSYM */,
 				FC04EABF1DF889ED002D0531 /* RxBlocking.framework.dSYM */,
 				FC04EAC01DF889ED002D0531 /* RxCocoa.framework.dSYM */,
 				FC04EAC11DF889ED002D0531 /* RxSwift.framework.dSYM */,
@@ -93,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FC04EAC71DF88B3D002D0531 /* MPMediaItem.swift */,
+				FC04EAD81DFB6056002D0531 /* AVAudioTime.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -127,6 +140,7 @@
 			children = (
 				FC04EAC61DF88B3D002D0531 /* Extensions */,
 				FC04EAC81DF88B3D002D0531 /* Models */,
+				FC04EADA1DFB6455002D0531 /* BarView.swift */,
 				FC04EACA1DF88B3D002D0531 /* Location.swift */,
 				FC04EACB1DF88B3D002D0531 /* MediaLibrary.swift */,
 				FC04EACC1DF88B3D002D0531 /* TrackCell.swift */,
@@ -220,6 +234,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GistSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -235,10 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC04EADB1DFB6455002D0531 /* BarView.swift in Sources */,
 				FC04EAD11DF88B3D002D0531 /* TrackCell.swift in Sources */,
 				FC04EACD1DF88B3D002D0531 /* MPMediaItem.swift in Sources */,
 				FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */,
 				FC04EAD01DF88B3D002D0531 /* MediaLibrary.swift in Sources */,
+				FC04EAD91DFB6056002D0531 /* AVAudioTime.swift in Sources */,
 				FC04EACF1DF88B3D002D0531 /* Location.swift in Sources */,
 				FC9E9A2C1DF7113C00F0F204 /* AppDelegate.swift in Sources */,
 				FC04EACE1DF88B3D002D0531 /* Track.swift in Sources */,
