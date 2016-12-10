@@ -21,16 +21,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var peakPowerLabel: UILabel!
 
+
+    let player = AVAudioPlayerNode()
+    let engine = AVAudioEngine()
+
+    let decay = 0.75
+    var peakEnergy: Float = 0.0
+    var rms: Float = 0.0
+    var centroid: Float = 0.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTable()
+        setup()
         let displayLink = CADisplayLink(target: self, selector: #selector(updateMeter))
         displayLink.add(to: RunLoop.main, forMode: .commonModes)
     }
     
     @objc func updateMeter() {
-
-        UIView.animate(withDuration: 0.015, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             let base = self.centroid
             self.canvas.backgroundColor = UIColor(colorLiteralRed: self.peakEnergy - (base / Float(4.0)), green: self.centroid - (base / Float(4.0)), blue: self.rms - (base / Float(4.0)), alpha: 1.0)
         })
@@ -41,15 +49,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    let player = AVAudioPlayerNode()
-    let engine = AVAudioEngine()
+    @objc
+    func handleCanvasTap(sender: UITapGestureRecognizer) {
+        player.stop()
+    }
 
-    let decay = 0.75
-    var peakEnergy: Float = 0.0
-    var rms: Float = 0.0
-    var centroid: Float = 0.0
+    func setup() {
+        canvas.isUserInteractionEnabled = true
+        canvas.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCanvasTap)))
 
-    func setupTable() {
         MPMediaLibrary.requestAuthorization({ [unowned self] state in
             switch state {
             case .authorized:
@@ -93,8 +101,6 @@ class ViewController: UIViewController {
                             }
 
                             self.player.installTap(onBus: 0, bufferSize: 1024, format: self.player.outputFormat(forBus: 0), block: tap)
-
-
                         }).addDisposableTo(self.disposeBag)
                 }
 
