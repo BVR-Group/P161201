@@ -21,7 +21,6 @@
 		FC04EAD31DF8AD94002D0531 /* GistSwift.framework.dSYM in DSYM */ = {isa = PBXBuildFile; fileRef = FC04EAD21DF8AD94002D0531 /* GistSwift.framework.dSYM */; };
 		FC04EAD51DF8ADA1002D0531 /* GistSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC04EAD41DF8ADA1002D0531 /* GistSwift.framework */; };
 		FC04EAD91DFB6056002D0531 /* AVAudioTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EAD81DFB6056002D0531 /* AVAudioTime.swift */; };
-		FC04EADB1DFB6455002D0531 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EADA1DFB6455002D0531 /* BarView.swift */; };
 		FC9E9A2C1DF7113C00F0F204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */; };
 		FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */; };
 		FC9E9A311DF7113C00F0F204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9E9A2F1DF7113C00F0F204 /* Main.storyboard */; };
@@ -61,7 +60,6 @@
 		FC04EAD21DF8AD94002D0531 /* GistSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GistSwift.framework.dSYM; path = Carthage/Build/iOS/GistSwift.framework.dSYM; sourceTree = "<group>"; };
 		FC04EAD41DF8ADA1002D0531 /* GistSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GistSwift.framework; path = Carthage/Build/iOS/GistSwift.framework; sourceTree = "<group>"; };
 		FC04EAD81DFB6056002D0531 /* AVAudioTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAudioTime.swift; sourceTree = "<group>"; };
-		FC04EADA1DFB6455002D0531 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		FC9E9A281DF7113C00F0F204 /* P161201.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P161201.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 			children = (
 				FC04EAC61DF88B3D002D0531 /* Extensions */,
 				FC04EAC81DF88B3D002D0531 /* Models */,
-				FC04EADA1DFB6455002D0531 /* BarView.swift */,
 				FC04EACA1DF88B3D002D0531 /* Location.swift */,
 				FC04EACB1DF88B3D002D0531 /* MediaLibrary.swift */,
 				FC04EACC1DF88B3D002D0531 /* TrackCell.swift */,
@@ -250,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC04EADB1DFB6455002D0531 /* BarView.swift in Sources */,
 				FC04EAD11DF88B3D002D0531 /* TrackCell.swift in Sources */,
 				FC04EACD1DF88B3D002D0531 /* MPMediaItem.swift in Sources */,
 				FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */,

@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     let disposeBag = DisposeBag()
 
-    @IBOutlet weak var canvas: BarView!
+    @IBOutlet weak var canvas: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var peakPowerLabel: UILabel!
 
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     @objc func updateMeter() {
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.15, delay: 0, options: .allowUserInteraction, animations: {
             let base = self.centroid
             self.canvas.backgroundColor = UIColor(colorLiteralRed: self.peakEnergy - (base / Float(4.0)), green: self.centroid - (base / Float(4.0)), blue: self.rms - (base / Float(4.0)), alpha: 1.0)
         })
@@ -55,7 +55,6 @@ class ViewController: UIViewController {
     }
 
     func setup() {
-        canvas.isUserInteractionEnabled = true
         canvas.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCanvasTap)))
 
         MPMediaLibrary.requestAuthorization({ [unowned self] state in
