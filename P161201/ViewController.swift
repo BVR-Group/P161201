@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     var rms: Float = 0.0
     var centroid: Float = 0.0
     var pitch: Float = 0.0
+    var crest: Float = 0.0
+
+    let shapeView = Shape(frame: CGRect(x: 0, y: 0, width: 128, height: 128), thickness: 8.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +42,13 @@ class ViewController: UIViewController {
     }
     
     @objc func updateMeter() {
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 1.1, animations: {
+            self.shapeView.transform = CGAffineTransform(scaleX: CGFloat(self.peakEnergy * 3), y: CGFloat(self.peakEnergy * 3))
+        })
+
         UIView.animate(withDuration: 0.15, delay: 0, options: .allowUserInteraction, animations: {
             let base = self.pitch
-            self.canvas.backgroundColor = UIColor(colorLiteralRed: self.peakEnergy - (base / Float(4.0)), green: self.centroid - (base / Float(4.0)), blue: self.rms - (base / Float(4.0)), alpha: 1.0)
+            self.canvas.backgroundColor = UIColor(colorLiteralRed: self.peakEnergy - base, green: self.centroid - base, blue: self.crest - base, alpha: 1.0)
         })
     }
 
@@ -53,6 +60,16 @@ class ViewController: UIViewController {
     @objc
     func handleCanvasTap(sender: UITapGestureRecognizer) {
         player.stop()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        shapeView.backgroundColor = UIColor.clear
+        shapeView.isOpaque = false
+        shapeView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+        canvas.addSubview(shapeView)
+        shapeView.center = canvas.center
     }
 
     func setup() {
@@ -93,11 +110,13 @@ class ViewController: UIViewController {
 
                                 let leftChannel = buffer.floatChannelData![0].withMemoryRebound(to: Float.self, capacity: Int(buffer.frameLength)) { $0 }
                                 gist.processAudio(frame: Array(UnsafeBufferPointer<Float>(start: leftChannel, count: 1024)))
+
                                 DispatchQueue.main.async {
-                                    self.peakEnergy = gist.peakEnergy()
-                                    self.rms        = gist.rootMeanSquare()
+                                    self.peakEnergy = min(gist.peakEnergy(), 3.0)
+                                    self.rms        = min(gist.rootMeanSquare() / 256, 1.0)
                                     self.centroid   = min(gist.spectralCentroid() / 256, 1.0)
-                                    self.pitch   = min(gist.pitch() / 256, 1.0)
+                                    self.pitch      = min(gist.pitch() / 10000 / 256, 1.0)
+                                    self.crest      = min(gist.spectralCrest() / 256, 1.0)
                                 }
                             }
 

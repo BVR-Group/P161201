@@ -21,6 +21,7 @@
 		FC04EAD31DF8AD94002D0531 /* GistSwift.framework.dSYM in DSYM */ = {isa = PBXBuildFile; fileRef = FC04EAD21DF8AD94002D0531 /* GistSwift.framework.dSYM */; };
 		FC04EAD51DF8ADA1002D0531 /* GistSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC04EAD41DF8ADA1002D0531 /* GistSwift.framework */; };
 		FC04EAD91DFB6056002D0531 /* AVAudioTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EAD81DFB6056002D0531 /* AVAudioTime.swift */; };
+		FC04EADD1DFBBD1D002D0531 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04EADC1DFBBD1D002D0531 /* Shape.swift */; };
 		FC9E9A2C1DF7113C00F0F204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */; };
 		FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */; };
 		FC9E9A311DF7113C00F0F204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9E9A2F1DF7113C00F0F204 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		FC04EAD21DF8AD94002D0531 /* GistSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GistSwift.framework.dSYM; path = Carthage/Build/iOS/GistSwift.framework.dSYM; sourceTree = "<group>"; };
 		FC04EAD41DF8ADA1002D0531 /* GistSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GistSwift.framework; path = Carthage/Build/iOS/GistSwift.framework; sourceTree = "<group>"; };
 		FC04EAD81DFB6056002D0531 /* AVAudioTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAudioTime.swift; sourceTree = "<group>"; };
+		FC04EADC1DFBBD1D002D0531 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		FC9E9A281DF7113C00F0F204 /* P161201.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P161201.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9E9A2B1DF7113C00F0F204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9E9A2D1DF7113C00F0F204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				FC9E9A321DF7113C00F0F204 /* Assets.xcassets */,
 				FC9E9A341DF7113C00F0F204 /* LaunchScreen.storyboard */,
 				FC9E9A371DF7113C00F0F204 /* Info.plist */,
+				FC04EADC1DFBBD1D002D0531 /* Shape.swift */,
 			);
 			path = P161201;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				FC04EACD1DF88B3D002D0531 /* MPMediaItem.swift in Sources */,
 				FC9E9A2E1DF7113C00F0F204 /* ViewController.swift in Sources */,
 				FC04EAD01DF88B3D002D0531 /* MediaLibrary.swift in Sources */,
+				FC04EADD1DFBBD1D002D0531 /* Shape.swift in Sources */,
 				FC04EAD91DFB6056002D0531 /* AVAudioTime.swift in Sources */,
 				FC04EACF1DF88B3D002D0531 /* Location.swift in Sources */,
 				FC9E9A2C1DF7113C00F0F204 /* AppDelegate.swift in Sources */,
