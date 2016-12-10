@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
     
     @objc func updateMeter() {
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 1.1, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 1.1, options: .allowUserInteraction, animations: {
             self.shapeView.transform = CGAffineTransform(scaleX: CGFloat(self.peakEnergy * 3), y: CGFloat(self.peakEnergy * 3))
         })
 
