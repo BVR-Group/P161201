@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     var peakEnergy: Float = 0.0
     var rms: Float = 0.0
     var centroid: Float = 0.0
+    var pitch: Float = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
     
     @objc func updateMeter() {
         UIView.animate(withDuration: 0.15, delay: 0, options: .allowUserInteraction, animations: {
-            let base = self.centroid
+            let base = self.pitch
             self.canvas.backgroundColor = UIColor(colorLiteralRed: self.peakEnergy - (base / Float(4.0)), green: self.centroid - (base / Float(4.0)), blue: self.rms - (base / Float(4.0)), alpha: 1.0)
         })
     }
@@ -95,7 +96,8 @@ class ViewController: UIViewController {
                                 DispatchQueue.main.async {
                                     self.peakEnergy = gist.peakEnergy()
                                     self.rms        = gist.rootMeanSquare()
-                                    self.centroid   = gist.spectralCentroid() / 255
+                                    self.centroid   = min(gist.spectralCentroid() / 256, 1.0)
+                                    self.pitch   = min(gist.pitch() / 256, 1.0)
                                 }
                             }
 
